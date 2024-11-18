@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public class Escribir {
     //Ruta al archivo de registro
-    private String rutaArchivo= "C:\\Usuarios\\emilionava\\Descargas\\registro.dat";
+    private String rutaArchivo= "registro.dat";
 
     public void agregarRegistro(String datos){
     try (BufferedWriter writer = new BufferedWriter (new FileWriter (rutaArchivo, true))){

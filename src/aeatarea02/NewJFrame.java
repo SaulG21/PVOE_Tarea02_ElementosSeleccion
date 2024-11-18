@@ -6,6 +6,7 @@
 package aeatarea02;
 
 import aeatarea02.operaciones.Escribir;
+import aeatarea02.operaciones.RegistroSelecciones;
 import java.util.LinkedList;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
@@ -312,8 +313,11 @@ public class NewJFrame extends javax.swing.JFrame {
     } else if (rbCyad.isSelected()) {
         division = "CyAD";
     }
-
+    
     String actividades = "";
+    RegistroSelecciones registro = new RegistroSelecciones();
+    actividades = registro.registrarActividades(listaChkBoxesActividades);
+    /*String actividades = "";
     if (cbEncuestas.isSelected()) {
         actividades += "Encuestas, ";
     }
@@ -322,11 +326,8 @@ public class NewJFrame extends javax.swing.JFrame {
     }
     if (cbPeraj.isSelected()) {
         actividades += "PERAJ, ";
-    }
-    if (!actividades.isEmpty()) {
-        actividades = actividades.substring(0, actividades.length() - 2);
-        actividades = "NINGUNA";
-    }
+    }*/
+    
 
     // Formatear los datos en una línea
     String datos = matricula + ", " + primerApellido + ", " + segundoApellido + ", " +
